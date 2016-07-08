@@ -3,16 +3,18 @@
 </head>
 
 <body>
-  <h1>Enter your classes</h1>
+  <h1>Enter in your class and prerequisite</h1>
 
-  {{> hello}}
+  {{> schedule}}
   {{> info}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>{{counter}}</p>
+<template name="schedule">
+  <input type="textArea" class="class"/>
+  <button class="add">add</button>
+  <button class="order">order</button>
   <p>{{classes}}</p>
+  <p>{{orderedClasses}}</p>
 </template>
 
 <template name="info">
