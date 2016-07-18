@@ -1,20 +1,44 @@
 <head>
   <title>schedule</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-  <h1>Enter in your class and prerequisite</h1>
+  <h1>Enter in a class and prerequisite</h1>
 
   {{> schedule}}
   {{> info}}
 </body>
 
 <template name="schedule">
-  <input type="textArea" class="class"/>
-  <button class="add">add</button>
-  <button class="order">order</button>
-  <p>{{classes}}</p>
-  <p>{{orderedClasses}}</p>
+  <input type="textArea" class="add-class-area"/>
+  <div class="btns-wrap">
+    <div class="add btn">
+      <p>add</p>
+    </div>
+    <div class="order btn">
+      <p>order</p>
+    </div>
+    <div class="test btn">
+      <p>test</p>
+    </div>
+  </div>
+  <h1 class="title">Classes to Take</h1>
+  <ul>
+    {{#each classes}}
+      <li>
+        <p>{{this}}</p>
+      </li>
+    {{/each}}
+  </ul>
+  <h1 class="title">Order to take in</h1>
+  <ul>
+    {{#each orderedClasses}}
+      <li>
+        <p>{{this}}</p>
+      </li>
+    {{/each}}
+  </ul>
 </template>
 
 <template name="info">

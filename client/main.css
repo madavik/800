@@ -1,1 +1,73 @@
-/* CSS declarations go here */
+h1, h2, h3, h4, h5, p {
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  font-weight: 100;
+}
+
+body {
+  margin: 30px 50px;
+}
+
+
+.add-class-area {
+  width: 450px;
+  height: 50px;
+  font-size: 20px;
+  padding: 0 20px;
+}
+
+.btns-wrap {
+  margin: 20px 0;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 42px;
+  margin-right: 20px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+.btn:hover p {
+  color: #fff;
+}
+.btn:hover:before, .btn:hover:after {
+  height: 42px;
+  width: 100%;
+  transition: height 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94), width 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 350ms;
+}
+
+.btn:before,
+.btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 0px;
+  width: 2px;
+  background-color: #000;
+  transition: height 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 350ms, width 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: -1;
+}
+
+.btn:before {
+  left: 0;
+}
+
+.btn:after {
+  right: 0;
+}
+
+.btn p {
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+  transition: color 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+}
