@@ -10,12 +10,31 @@ body {
   margin: 30px 50px;
 }
 
-
+.title {
+  border-bottom: 1px solid #000;
+  width: 450px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.comma-string{
+  width: 35%;
+}
 .add-class-area {
   width: 450px;
   height: 50px;
   font-size: 20px;
   padding: 0 20px;
+}
+
+.tests {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
+
+.tests .btn {
+  left: 50%;
+  margin-left: -60px;
 }
 
 .btns-wrap {

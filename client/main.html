@@ -19,12 +19,12 @@
     <div class="order btn">
       <p>order</p>
     </div>
-    <div class="test btn">
-      <p>test</p>
+    <div class="clear btn">
+      <p>clear</p>
     </div>
   </div>
   <h1 class="title">Classes to Take</h1>
-  <ul>
+  <ul class="list-classes">
     {{#each classes}}
       <li>
         <p>{{this}}</p>
@@ -32,13 +32,55 @@
     {{/each}}
   </ul>
   <h1 class="title">Order to take in</h1>
-  <ul>
+  <ul class="list-classes">
     {{#each orderedClasses}}
       <li>
         <p>{{this}}</p>
       </li>
     {{/each}}
   </ul>
+  <p class="comma-string">{{orderedClasses}}</p>
+  <div class="tests">
+    <div class="test">
+      <h1 class="title">Example Test</h1>
+      <ul class="list-classes">
+        {{#each test1}}
+          <li>
+            <p>{{this}}</p>
+          </li>
+        {{/each}}
+      </ul>
+      <div class="test-1 btn">
+        <p>test</p>
+      </div>
+    </div>
+    <div class="test">
+      <h1 class="title">Chain Dependent Test</h1>
+      <ul class="list-classes">
+        {{#each test2}}
+          <li>
+            <p>{{this}}</p>
+          </li>
+        {{/each}}
+      </ul>
+      <div class="test-2 btn">
+        <p>test</p>
+      </div>
+    </div>
+    <div class="test">
+      <h1 class="title">Circular Test</h1>
+      <ul class="list-classes">
+        {{#each test3}}
+          <li>
+            <p>{{this}}</p>
+          </li>
+        {{/each}}
+      </ul>
+      <div class="test-3 btn">
+        <p>test</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <template name="info">
